@@ -1,0 +1,640 @@
+<!--
+  [IMPORTANT]
+  ❗ REMOVE META VIEWPORT TAG IN LINE 12 TO MAKE IT A VALID APM4EMAIL PAGE.
+-->
+<!doctype html>
+<html ⚡4email>
+  <!-- <title>MailCode</title> -->
+<head>
+  <meta charset="utf-8">
+<!--remove the below meta tag to make it compatable with amp4email specifications,
+But, this will kill the responsivness of the page-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"> 
+
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <style amp4email-boilerplate>body{visibility:hidden}</style>
+  <style amp-custom>
+     *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    outline: none;
+  }
+  a{
+    text-decoration: none;
+    color:inherit;
+  }
+
+        html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+      body{
+          margin:0px;
+          padding:0px;
+      }
+      html,body{
+   font-family: 'Segoe UI', sans-serif;
+   font-size:1.1rem;
+   font-weight: 300;
+   color:#818181;
+}
+@media (min-width: 992px) {
+ html,body{
+   font-size:1.2rem;
+ }
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+      #root{
+        min-height:100vh;
+          width:100vw;
+          background: #eeeff3;
+      }
+      .icon{
+    display: inline;
+    height: 1.2em;
+    box-sizing: border-box;
+    margin: 0.1em;
+    margin-bottom: 0em;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  button{
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+margin:0.2rem;
+border:none;
+background:#008cff ;
+color:white;
+cursor: pointer;
+transition-property: all;
+transition-duration: 100ms;
+}
+.size-xs{
+  font-size:0.8rem;
+}
+.size-s{
+  font-size:1rem;
+}
+.size-m{
+  font-size:1.2rem;
+}
+.size-l{
+  font-size:1.5rem;
+}
+.size-xl{
+  font-size:2rem;
+}
+.size-xxl{
+  font-size:3rem;
+}
+
+
+@media(min-width:360px){
+  .size-xs{
+    font-size:1rem;
+  }
+  .size-s{
+    font-size:1.1rem;
+  }
+  .size-m{
+    font-size:1.5rem;
+  }
+  .size-l{
+    font-size:1.8rem;
+  }
+  .size-xl{
+    font-size:2.2rem;
+  }
+  .size-xxl{
+    font-size:3.5rem;
+  }
+
+}
+@media (min-width: 992px) {
+ .size-xl{
+  font-size:3rem;
+}
+.size-l{
+  font-size:2rem;
+}
+.size-m{
+  font-size:1.8rem;
+}
+.size-s{
+  font-size:1.15rem;
+}
+.size-xs{
+  font-size:1rem;
+}
+.size-xxl{
+  font-size:3.5rem;
+}
+
+}
+
+
+.ink-black{
+  color:#2D2D2D;
+}
+.ink-dark{
+  color:#95989A;
+}
+.ink-light{
+  color:#D4D4D4;
+}
+.ink-white{
+  color:rgb(255, 255, 255);
+}
+.ink-blue{
+  color:#00A8FF;
+}
+.ink-orange{
+  color:#FFB84D;
+}
+.ink-red{
+  color:#FF004E;
+}
+.ink-green{
+  color:rgb(76, 217, 100);
+}
+.ink-purple{
+  color:rgb(132, 0, 255);
+}
+
+.base-light{
+  font-weight: 200;
+}
+.base-semilight{
+  font-weight: 400;
+}
+.base-regular{
+  font-weight: 600;
+}
+.base-semibold{
+  font-weight:700;
+}
+.base-bold{
+  font-weight:800;
+}
+.center{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+}
+.center-responsive{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+@media(min-width:600px){
+  .center-responsive{
+    flex-direction: row;
+  }
+}
+.center-col{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.container-healthy{
+  padding-right: 10px;
+  padding-left: 10px;
+  position:relative;
+  width:100%;
+  max-width:650px;
+  }
+  .container-slim{
+    padding-right: 10px;
+    padding-left: 10px;
+    position:relative;
+    width:100%;
+    max-width:400px;
+    }
+   .txt-align-left{
+    text-align: left;
+   }
+    .top_bar {
+      padding: 0.8rem 2rem;
+      background: rgb(255, 255, 255);
+      position: sticky;
+      position:-webkit-sticky;
+      top:0px;
+      z-index: 2;
+      box-shadow: rgb(231, 231, 231) 0px 1px 10px 0px;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      max-height:4rem;
+      width:100vw;
+      overflow: hidden;
+    }
+  .top_cards{
+    max-height: 25rem;
+    background: #fcfcfc;
+  }
+  .menu_butt:hover{
+    cursor:pointer;
+  }
+  .amp-carousel-button{
+    opacity:0.3;
+    border-radius: 100%;
+    background:rgba(185, 185, 185, 0.7);
+  }
+  .amp-carousel-button:hover{
+    opacity:0.9;
+  }
+  .top_card{
+    padding:1rem;
+    background: #ffffff;
+  }
+  .top_card1{
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+ 
+  #art1_container{
+    padding:0rem 1rem;
+  }
+  .txt1_title{
+    font-size:2rem;
+  }
+   .txt1{
+   padding-top:0.6rem;
+   font-size:1rem;
+ }
+.input_txt{
+  margin:0.1rem;
+  padding:1rem;
+  color:rgb(156, 156, 156);
+  font-size: 0.8rem;
+  border:none;
+  background: rgb(255, 255, 255);
+  width:100%;
+  box-shadow: 0px 4px 20px 12px #f7f7f7;
+  min-width:17rem;
+
+}
+.submit{
+  padding:0.7rem;
+  color:rgb(255, 255, 255);
+  font-size: 0.8rem;
+  border:none;
+  background: rgb(140, 0, 255);
+  width:100%;
+  border-radius: 0.4rem;
+  min-width:17rem;
+
+}
+.submit:hover{
+  background: rgb(204, 0, 255);
+}
+.input_txt:focus{
+  border:thin solid rgb(0, 174, 255);
+  box-shadow: 0px 4px 20px 12px  #baebff;
+}
+.p2{
+  display:grid;
+  grid-template-columns: 50% 50%;
+}
+.p2_txt{
+  padding: 2rem 1.7rem;
+}
+@media(min-width:700px){
+  .p2_txt{
+  padding-right: 0rem;
+}
+.ad_holder{
+margin:3rem;
+}
+}
+  @media(max-width:700px){
+    .top_card{
+    padding:0.5rem;
+    line-height: 1.15;
+  }
+  #art1_container{
+    padding:0rem;
+  }
+  .txt1_title{
+    font-size:1.05rem;
+  }
+  .txt1{
+   font-size:0.6rem;
+ }
+ .p2{
+  display:block;
+ }
+  }
+  .card1_txt{
+    padding-left:1.2rem;
+    align-items: flex-start;
+    max-width:30rem;
+  }
+  .field{
+    padding:1rem 0.4rem 0rem 0.4rem;
+  }
+.form{
+  box-shadow: 0px 0px 20px 2px #b5b5b540;
+  min-height:20rem;
+  width:100%;
+  min-width:15rem;
+  background: white;
+  padding:1.2rem;
+  margin:2rem;
+  max-width: 23rem;
+}
+@media(max-width:700px){
+  .form{
+    box-shadow: none;
+    margin:0.3rem;
+    max-width:100vw;
+    overflow: hidden;
+  }
+  .form_title{
+    margin-bottom:0.4rem
+  }
+}
+.left{
+  display: flex;
+  align-items: baseline;
+}
+.space-bottom{
+  margin-bottom: 0.3rem;
+}
+textarea{
+  margin: 0px;
+    height: 156px;
+    width: 331px;
+    padding: 0.6rem;
+    border: none;
+    background: rgb(245, 245, 245);
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
+    font-family: inherit;
+}
+amp-list div[role="list"] {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+@media(max-width:700px){
+  .break{
+display:none;
+}
+amp-list div[role="list"] {
+      display: block;
+    }
+}
+.p3{
+  padding:2rem 1.7rem;
+}
+
+.footer{
+  min-height: 4rem;
+  background:rgb(236, 236, 236);
+}
+  </style>
+</head>
+<body>
+    <div id="root">
+ <div class="top_bar">
+      <div class="center">
+        <amp-img 
+        src="https://sparecdn.web.app/amp/mailcode.jpg"
+         width="4.5rem" height="1.3rem"></amp-img>
+        </div>
+      <div class="center menu_butt">
+         <amp-img 
+         src="https://sparecdn.web.app/amp/menu.jpg"
+          width="1rem" height="1rem"></amp-img>
+      </div>
+  </div>
+
+<amp-carousel class="top_cards" type="slides"
+  width="300" height="150"
+  layout="responsive" 
+  loop
+  autoplay
+  delay="5000"  data-next-button-aria-label="Go to next slide"
+  data-previous-button-aria-label="Go to previous slide">
+  <div class="top_card top_card1">
+   <div class="center-col txt-align-left card1_txt">
+    <div class="ink-black base-semibold txt1_title">There are many variations of passengers</div>
+    <div class="size-xs ink-light base-semilight txt1 txt-align-left">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, Hendrerit gravida rutrum.
+    </div>
+   </div>
+   <div id="art1_container">
+    <amp-img src="https://sparecdn.web.app/amp/art1.jpg"
+    layout="responsive"
+    height="1"
+    width="1"
+      >
+   </div>
+  </div>
+     <amp-img src="https://sparecdn.web.app/amp/art2.jpg"
+  layout="fixed-height"
+  height="800"
+    ></amp-img>
+ 
+ 
+  <amp-img src="https://sparecdn.web.app/amp/image3.jpg"
+  layout="fill"
+  height="1000" 
+    ></amp-img>
+</amp-carousel>
+
+<div class="p2">
+<div class="p2_txt">
+ <div class="ink-black base-semibold size-m">
+    On the other hand,<br/>
+  we denounce with righteous
+ </div>
+ <br/>
+ <div class="ink-purple base-regular size-s">
+Omnis dolor repellendus.
+ </div>
+ <br/>
+ <div class="ink-black base-semilight size-xs">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+   Integer eget aliquet nibh praesent tristique magna. Vulputate ut pharetra sit amet aliquam id.
+    <br/>
+    <br/> 
+     Euismod nisi porta lorem mollis aliquam.
+    <span class="base-regular">There are many variations of passages</span> of Lorem Ipsum available, but theses majority have suffered alteration in some form,
+     by injected humour, or randomised words which don’t look even slightly believable. It uses a dictionary of over 200 Latin words,
+      combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+     Consequat interdum varius sit amet mattis vulputate. Eu scelerisque felis imperdiet proin fermentum leo vel orci.
+    <div>
+      <ul>
+        <li>
+         Who are beguiled and demoralized by the charms of pleasure of the momont,
+          so blinded by desire, that they cannot
+        </li>
+        <li>
+            Blinded by desire, that they cannot
+        </li>
+        <li>
+          Accusatium doloremque laudantium, totam rem aperiam.
+        </li>
+      </ul>
+    </div>
+   </div>
+</div>
+<div class="center">
+<div class="center-col form">
+<div class="ink-black base-semibold size-s form_title">Generators on the Internet</div>
+<form method="post"
+action-xhr="https://example.com/subscribe" >
+<div class="field">
+  <input type="text"  class="input_txt"
+      name="name"
+      placeholder="Name"
+      required>
+</div>
+  <div class="field">
+    <input type="tel" class="input_txt"
+      name="phone"
+      placeholder="Phone Number"
+      required>
+  </div>
+  <div class="field">
+     <input type="text"  class="input_txt"
+  name="location"
+  placeholder="Location"  required> 
+  <!--list="locations"
+   <datalist id="locations">
+      <option value="Chicago">
+      <option value="New York">
+      <option value="Indianapolis">
+      <option value="Los Angeles">
+      <option value="Washington DC">
+    </datalist>
+  --> 
+ 
+  </div>
+  <div class="field size-xs ink-dark base-semilight">
+      <label>
+          <input name="time"
+            value="morning"
+            type="checkbox" >
+            Morning
+        </label>
+        <label>
+          <input name="time"
+            value="noon"
+            type="checkbox">
+            Noon
+        </label>
+        <label>
+            <input name="time"
+              value="evening"
+              type="checkbox">
+              Evening
+          </label>
+  </div>
+  <div class="field size-xs ink-dark base-regular">
+    <div class="size-xs ink-black base-refular left space-bottom">
+      Choose we denounce with righteous
+    </div>
+    <div class="left">
+        <label>
+          <input name="choice"
+            value="yes"
+            type="radio" >
+            Yes
+        </label>
+        <label>
+          <input name="choice"
+            value="no"
+            type="radio">
+            No
+        </label>
+    </div>
+    
+   </div>
+   <div class="field size-xs ink-dark base-regular">
+      <div class="size-xs ink-black base-refular left space-bottom">
+        Write your comments
+      </div>
+      <textarea name="comment" placeholder="What do you need right now?"></textarea>
+     </div>
+  <div class="field">
+     <input class="submit" type="submit"
+    value="Submit">
+  </div>
+</form>
+</div>
+</div>
+</div>
+
+<div class="break"><hr/></div>
+<div class="p3">
+<div class="size-m base-semibold ink-black">
+Product Listings
+</div>
+<br/>
+<div class="size-s base-semilight ink-black">
+  On the other hand, we denounce with righteous indignation and dislike
+</div>
+<br/>
+<div>
+    <amp-list width="auto"
+    height="100"
+    layout="fixed-height"
+    src="https://sparecdn.web.app/amp/list.json">
+    <div fallback><div class="size-s ink-light base-semibold space-bottom">Someting went wrong</div></div>
+    <template type="amp-mustache">
+      <div class="ad_holder">
+         <div class="space-bottom">
+           <amp-img src="{{url}}" layout="responsive" height="1" width="1.5"></amp-img>
+        </div>
+      <div>
+       <div class="size-s ink-black base-regular space-bottom">{{title}}</div>
+       <div class="size-xs ink-black base-semilight space-bottom">{{body}}</div>
+       <br/>
+      </div>
+      </div>
+       
+    
+  </template>
+  </amp-list>
+</div>
+</div>
+<div class="footer center">
+<div class="size-s ink-dark base-semilight">Made with ❤ by <a href="mailto:asen182000@hotmail.com">Aritra</a>.</div>
+</div>
+</div>
+
+</body>
+</html>
